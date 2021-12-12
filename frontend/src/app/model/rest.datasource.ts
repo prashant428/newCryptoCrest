@@ -23,6 +23,17 @@ export class RestDataSource {
         this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
     }
 
+     //gets user list
+     getUserList(): Observable<User[]> {
+        return this.http.get<User[]>(this.baseUrl + "users/userprofile");
+    }
+
+    //update user item
+    updateUser(item: User): Observable<User> {
+        return this.http.put<User>(`${this.baseUrl}users/editUser/${item.username}`,
+            item, this.getOptions());
+    }
+
 
     //gets survey list
     getSurveyList(): Observable<Survey[]> {

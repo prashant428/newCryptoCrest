@@ -14,10 +14,8 @@
            
         
         <div  *ngFor="let item of userList" style="text-align: center;" >
-
-            <h4 style="color: aliceblue;" *ngIf="auth.username != null" >Username:  {{ auth.username }}</h4>
             <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">Last Name: {{ item.lastName }}</h4>
-            <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">First Name {{ item.firstName }}</h4>
+            <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">First Name: {{ item.firstName }}</h4>
             <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">Email: {{item.email}}</h4>
 
         </div>

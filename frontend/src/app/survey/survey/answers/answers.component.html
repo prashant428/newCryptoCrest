@@ -24,17 +24,23 @@
                     <!--<form #form="ngForm">-->
                     <td>{{question.ques }}</td>
                     <td>
-                        <input id="answer_{{question.ques}}" type="text" name="answer_{{question.ques}}" [(ngModel)]="answers[i]" 
-                       
-                        />
-            
+                        <input id="answer_{{question.ques}}" type="text" name="answer_{{question.ques}}" [(ngModel)]="answers[i]"/>
                
                     </td>
                 <!--</form>-->
                 </tr>
-                <button type=submit (click)="save()" style="margin-left: 450px;">Submit</button>
+                
+                   
 
             </table>
+            <br/>
+            <div class="row" style="margin:auto" >
+                <button type=submit (click)="save()" style="width: 200px;"> <i class="fas fa-paper-plane"></i> Submit</button>
+
+            <button routerLink="/survey/list" style="width: 200px;" ><i class="fas fa-undo"></i> Cancel</button>
+        
+            </div>
+            
            
             <app-footer> </app-footer>
         </div>

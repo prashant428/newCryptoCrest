@@ -11,7 +11,7 @@ import { UserRepository } from "./user.repository";
     providers: [
         SurveyRepository,
         RestDataSource,
-        AuthService, 
+        AuthService ,
         UserRepository
     ]
 })

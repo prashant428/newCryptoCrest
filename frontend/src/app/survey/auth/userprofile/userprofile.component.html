@@ -7,19 +7,23 @@
     
 
         <div class="container_header">
-            <h1 *ngIf="auth.username != null" >Username:  {{ auth.username }}</h1>
+            <h1>User Information</h1>
+        </div >
+            
            <!-- <img src="../../assets/profile.png" alt="Profile Picture" style="width:50%; background-color: aliceblue; margin-left: 180px;">-->
            
-        </div >
-        <div class="container_header" *ngFor="let item of userList" >
-            <h1 *ngIf="auth.username == item.username">Last Name: {{ item.lastName }}</h1>
-            <h1 *ngIf="auth.username == item.username">First Name {{ item.firstName }}</h1>
-            <h1 *ngIf="auth.username == item.username">Email: {{item.email}}</h1>
+        
+        <div  *ngFor="let item of userList" style="text-align: center;" >
+
+            <h4 style="color: aliceblue;" *ngIf="auth.username != null" >Username:  {{ auth.username }}</h4>
+            <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">Last Name: {{ item.lastName }}</h4>
+            <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">First Name {{ item.firstName }}</h4>
+            <h4 style="color: aliceblue;" *ngIf="auth.username == item.username">Email: {{item.email}}</h4>
 
         </div>
         
-
-        <button [routerLink]="['/users/editprofile/', item.username]" style="margin: 0%;" class="btn bg-primary">
+        <br>    
+        <button [routerLink]="['/users/editprofile/', item.username]" style="margin-left: 29%;">
             Edit User Information
         </button>
         

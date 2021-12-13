@@ -5,11 +5,23 @@
 <div class="container_div" style="padding-top: 30px; width: 55%; height: 850px; ">
     <div class="row">
         <div class="container_header">
-            <h3>Survey Name: {{item.item}}</h3>
-            <h3>Survey Description: {{item.status}}</h3>
-            <h3>Please Enter {{item.qty}} Questions for the Survey</h3>
+            <h1 style="color: rgb(171, 225, 253);"> Add Questions</h1>
+            
+        </div>
+
             
             <form novalidate #form="ngForm">
+
+            <br>
+            
+            <h4 style="color: aliceblue;"><b>Survey Name:</b> {{item.item}}</h4>
+            <h4 style="color: aliceblue;"><b>Survey Description:</b> {{item.status}}</h4>
+
+            <br>
+          
+            
+            <!-- <h4 style="color: aliceblue;">Please Enter {{item.qty}} Questions for the Survey</h4> -->
+
                 <!-- <form class="form" method="POST"> -->
                     <div class="form-group">
                         
@@ -44,27 +56,29 @@
                     >
 
                     <button (click)="addQuestions(ques.value, option1.value, option2.value)">Add</button>
+
+                    <button routerLink="/survey/list" >
+                        <i class="fas fa-undo"></i> 
+                        Cancel
+                    </button>
                 </div>
                
-                <br/>
+                
 
                <!-- <button (click)="save(form)"
                 type="submit">
                     <i class="fas fa-edit"></i> 
                     Submit
                 </button>-->
-                <button routerLink="/survey/list" >
-                    <i class="fas fa-undo"></i> 
-                    Cancel
-                </button>
+                
 
             </form>
-        
-         <h3>Total Questions Added: {{item.surveyQuestions.length}}</h3>
+        <br>
+         <h4 style=" color: rgb(171, 225, 253); text-align: center;">Total Questions Added: {{item.surveyQuestions.length}}</h4>
 
                
 
-        </div>
+    
     </div>
   
     <app-footer></app-footer>

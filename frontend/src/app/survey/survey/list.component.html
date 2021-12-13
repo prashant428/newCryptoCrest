@@ -6,26 +6,26 @@
     <main class="container_div" style="padding-top: 40px;height: 850px;">
         <div class="container_header">
 
-            <h1><i class="fas fa-poll-h" style="color: #1a75ff;"></i>  Survey List</h1>
+            <h1><i class="fas fa-poll-h" style="color: #8caee0;"></i> Survey List</h1>
         </div>
         <div>
             <div>
                 <br>
-                <a routerLink="/survey/add" class="btn btn-primary align-self-end" role="button" style="background-color: #ffdb4d; border-color: #ffdb4d; color: black; font-weight: bolder;">
+                <a routerLink="/survey/add" class="btn btn-primary align-self-end" role="button" style="background-color: #71a3ee; border-color: #71a3ee; color: rgb(255, 255, 255); font-weight: bolder;">
                     <i class="fas fa-plus-circle"></i>
                     Add a new Survey
                 </a>
             </div>
-            <br/>
+            
         </div>
 
-        <div class="table">
+        <div class="table ">
             <br>
             <table>
                 <!-- Header Row-->
-                <tr style="background-color: #3385ff; color: white; font-weight:bolder;">
+                <tr style=" color:aliceblue; font-weight:bolder;">
                     <th>Survey Name</th>
-                    <th>Number of questions</th>
+                    <!-- <th>Number of questions</th> -->
                     <th>Description</th>
                     <th>Creator</th>
                     <th>Start Date</th>
@@ -37,7 +37,7 @@
 
                 <tr *ngFor="let item of surveyList">
                     <td>{{item.item }}</td>
-                    <td>{{item.surveyQuestions.length }}</td>
+                    <!-- <td>{{item.surveyQuestions.length }}</td> -->
                     <td>{{item.status }}</td>
                     <td>{{item.creator}}</td>
                     <td>{{item.startDate | date: 'yyyy-MM-dd'}}</td>
@@ -58,18 +58,18 @@
 
                     <td class="text-center">
                         <!-- <a href="/survey/delete/{{item._id }}" class="btn btn-danger btn-sm"> -->
-                        <button [disabled]="item.creator!==this.username" [routerLink]="['/addQues', item._id]" style="margin: 0%;">Add Questions</button>
+                        <button [disabled]="item.creator!==this.username" [routerLink]="['/addQues', item._id]" class="btn btn-secondary" style="width: 100px; height: 20%; background-color: salmon; border-color: salmon;">Add Questions</button>
                     </td>
 
                     <td class="text-center">
                         <!-- <a href="/survey/delete/{{item._id }}" class="btn btn-danger btn-sm"> -->
-                        <button [disabled]="item.endDate<todayDate" [routerLink]="['/viewQues', item._id]" style="margin: 0%;">Answer Questions</button>
+                        <button [disabled]="item.endDate<todayDate" [routerLink]="['/viewQues', item._id]" class="btn btn-info" style="width: 100px; height: 20%;">Answer Questions</button>
                     </td>
 
                     <td class="text-center">
                         <!-- <a href="/survey/delete/{{item._id }}" class="btn btn-danger btn-sm"> -->
                        
-                        <button [disabled]="item.creator!==this.username" [routerLink]="['/viewAns', item._id]" style="margin: 0%;">View Answers</button>
+                        <button [disabled]="item.creator!==this.username" [routerLink]="['/viewAns', item._id]" class="btn btn-secondary" style="width: 100px; height: 20%;">View Answers</button>
                    
                     </td>
 

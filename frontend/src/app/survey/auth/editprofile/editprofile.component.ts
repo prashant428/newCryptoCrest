@@ -26,7 +26,7 @@ export class EditprofileComponent  {
     }
 
     save(form: NgForm) {
-       // this.item.username=this.auth.username;
+        
         this.repository.saveUser(this.item);
         this.router.navigateByUrl("users/userprofile");
         console.log(this.item);

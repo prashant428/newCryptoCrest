@@ -21,7 +21,7 @@ export class UserRepository {
         return (this.user.find(item => item.username === username)!);
     }
 
-    //saves survey from user
+    //saves user from user
     saveUser(item: User) {
        
             this.dataSource.updateUser(item)

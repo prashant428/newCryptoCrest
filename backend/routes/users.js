@@ -23,8 +23,8 @@ router.get('/userprofile', usersController.userList);
 router.get('/get-item/:username', usersController.userByID, usersController.getItem);
 
 // router.get('/edit/:id', requireAuth, surveyController.displayEditPage);
-router.put('/editUser/:username',
- //passport.authenticate('jwt', { session: false }), 
+router.put('/editprofile/:username',
+ passport.authenticate('jwt', { session: false }), 
  usersController.processEditUser);
 
 

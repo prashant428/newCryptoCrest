@@ -30,7 +30,7 @@ export class RestDataSource {
 
     //update user item
     updateUser(item: User): Observable<User> {
-        return this.http.put<User>(`${this.baseUrl}users/editUser/${item.username}`,
+        return this.http.put<User>(`${this.baseUrl}users/editprofile/${item.username}`,
             item, this.getOptions());
     }
 

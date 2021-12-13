@@ -115,12 +115,12 @@ exports.userByID = function (req, res, next) {
 //logic to process edit user
 module.exports.processEditUser = (req, res, next) => {
 
-  let username = req.params.username
+  let name = req.params.username
 
 
   let updatedItem = new User(req.body)
 
-  User.updateOne({username: username}, updatedItem, (err) => {
+  User.updateOne({username: name}, updatedItem, (err) => {
       if(err)
       {
           console.log(err);

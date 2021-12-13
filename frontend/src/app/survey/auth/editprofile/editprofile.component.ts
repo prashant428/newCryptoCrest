@@ -19,17 +19,14 @@ export class EditprofileComponent  {
                 private router: Router,
                 activeRoute: ActivatedRoute) 
     { 
-        this.editing = activeRoute.snapshot.params["mode"] == "edit";
-        
-        if (this.editing) {
-             auth.username  = this.item.username;
             this.item = repository.getItem(activeRoute.snapshot.params["username"]);
-        } 
+            console.log(this.item);
+        
           
     }
 
     save(form: NgForm) {
-        this.item.username=this.auth.username;
+       // this.item.username=this.auth.username;
         this.repository.saveUser(this.item);
         this.router.navigateByUrl("users/userprofile");
         console.log(this.item);

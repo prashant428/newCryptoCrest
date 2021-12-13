@@ -49,7 +49,7 @@ import { EditprofileComponent } from './survey/auth/editprofile/editprofile.comp
       //canActivate:[AuthGuard]
       },
       {path:"viewAns/:id", component: ViewAnswersComponent},
-      {path:"users/userprofile", component:UserprofileComponent},
+      {path:"users/userprofile", component:UserprofileComponent, canActivate: [AuthGuard]},
       {path:"users/editprofile/:username", component:EditprofileComponent},
      { path: "**", redirectTo: "" }
     ])

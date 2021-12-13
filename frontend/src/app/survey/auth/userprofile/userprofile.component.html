@@ -7,7 +7,7 @@
     
 
         <div class="container_header">
-            <h1>User Information</h1>
+            <h1>{{ auth.username }}</h1>
         </div >
             
            <!-- <img src="../../assets/profile.png" alt="Profile Picture" style="width:50%; background-color: aliceblue; margin-left: 180px;">-->
@@ -22,7 +22,7 @@
         
         <br>    
         <button [routerLink]="['/users/editprofile/', item.username]" style="margin-left: 29%;">
-            Edit User Information
+            <i class="fas fa-user-edit"></i> Edit User Information
         </button>
         
 

@@ -22,7 +22,7 @@ router.post('/signin', usersController.signin);
 router.get('/userprofile', usersController.userList);
 router.get('/get-item/:username', usersController.userByID, usersController.getItem);
 
-// router.get('/edit/:id', requireAuth, surveyController.displayEditPage);
+// router.get('/edit/:id', requireAuth, usersController.displayEditPage);
 router.put('/editprofile/:username',
  passport.authenticate('jwt', { session: false }), 
  usersController.processEditUser);

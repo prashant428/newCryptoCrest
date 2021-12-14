@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/model/auth.service';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-    
+    //constrcutor for logout
   constructor(public auth: AuthService, private router: Router){}
     logout() {
       if (confirm('Are you sure?')) {

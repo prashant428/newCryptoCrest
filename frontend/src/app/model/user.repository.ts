@@ -12,11 +12,11 @@ export class UserRepository {
             this.user = data;
         });
     }
-
+//gets user list
     getUser(): User[] {
         return this.user;
     }
-
+//gets individual user
     getItem(username: string): User {
         return (this.user.find(item => item.username === username)!);
     }

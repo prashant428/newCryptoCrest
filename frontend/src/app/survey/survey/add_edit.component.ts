@@ -31,13 +31,13 @@ export class AddEditComponent {
         } 
           
     }
-
+//saves user entered data
     save(form: NgForm) {
         this.item.creator=this.auth.username;
         this.repository.saveSurvey(this.item);
         this.router.navigateByUrl("survey/list");
     }
-
+//deletes item
     private deleteItem(id: string){
         this.repository.deleteSurvey(id);
         this.router.navigateByUrl("survey/list");

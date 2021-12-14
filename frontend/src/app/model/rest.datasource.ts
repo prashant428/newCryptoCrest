@@ -20,7 +20,7 @@ export class RestDataSource {
     auth_token: string;
 
     constructor(private http: HttpClient) {
-        this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
+        this.baseUrl = "https://cryptocrestfront.herokuapp.com/"
     }
 
      //gets user list
@@ -84,7 +84,7 @@ export class RestDataSource {
                 return response;
             }));
     }
-
+//gets http headers
     private getOptions() {
         return {
             headers: new HttpHeaders({

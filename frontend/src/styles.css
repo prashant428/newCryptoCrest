@@ -1,13 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
 
-
-/**
-Author Name: Ayesha Mohammed Azim
-Student number: 301166757
-Date: 2 October 2021
-File name: style.css
-**/
-
+/* styles for main div */
 .main_div{
   position:relative;
   width: 100%;
@@ -24,7 +16,7 @@ File name: style.css
   font-weight: bold;
   
 }
-
+/* style for container div */
 .container_div{
   background-color:rgba(0,0,0,0.6);
   width:65vw;
@@ -152,7 +144,7 @@ button:hover{
   color:black;
   opacity:1;
   font-weight: bold;
-  background:rgba(204, 204, 255,0.6);
+  background:#ccccff99;
   transition:all 0.5s ease;
 }
 
@@ -177,7 +169,7 @@ hr{
   border-top-style: dotted;
   border-width: 12px;
   width: 10%;
-  border-color:gray;
+  border-color:#808080;
   background-color: transparent;
   justify-content: center;
   margin-left: 39%;

@@ -8,7 +8,7 @@
             <h4 style="color: aliceblue;"><b>Survey Name:</b> {{item.item}}</h4>
             <h4 style="color: aliceblue;"><b>Survey Description:</b> {{item.status}}</h4>
         </div>
-
+        <!-- Table for answers starts here -->
         <div class="table">
             <br>
             <table>
@@ -18,7 +18,6 @@
                     <th>Answer (in 5 words or less))</th>
                 
                 </tr>
-               
                 <!-- Repeatable Template Row -->
                 <tr *ngFor="let question of item.surveyQuestions; let i=index">
                     <!--<form #form="ngForm">-->
@@ -27,31 +26,18 @@
                         <input id="answer_{{question.ques}}" type="text" name="answer_{{question.ques}}" [(ngModel)]="answers[i]"/>
                
                     </td>
-                <!--</form>-->
                 </tr>
-                
-                   
-
             </table>
             <br/>
+            <!-- Div for Buttons -->
             <div class="row" style="margin:auto" >
                 <button type=submit (click)="save()" style="width: 200px;"> <i class="fas fa-paper-plane"></i> Submit</button>
 
             <button routerLink="/survey/list" style="width: 200px;" ><i class="fas fa-undo"></i> Cancel</button>
-        
             </div>
-            
-           
             <app-footer> </app-footer>
         </div>
     </main>
 </div>
 
-<!-- <style>
-   tr:nth-child(odd) {
-  background-color: rgba(204, 204, 255,0.6);
-  color: black;
-}
-   
-      </style> -->
 

@@ -3,16 +3,14 @@
 <div class="main_div" style="background-image:url('../../assets/work1.png'); height: 800px;">
     <div class="container_div" style="padding-top: 30px; width: 55%; height: 800px; ">
     <div class="row">
-
         <div class="container_header">
             <h1>Sign-Up</h1>
-</div>
+       </div>
             <div class="bg-danger mt-2 p-2 text-center text-white" *ngIf="message != null">
                 {{message}}
             </div>
-
             <form novalidate #form="ngForm" (ngSubmit)="signup(form)">
-            <!-- <form action="/users/signup" method="post" validate> -->
+            <!-- form starts -->
                 <div class="form-group">
                     <input type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Enter your first name:"/>
                 </div>
@@ -38,11 +36,11 @@
                     <button type="submit" value="Sign up"> Signup </button>
                 </div>
             </form>
-        </div>
-            <br>
-            <br>
-            <br>
-            <app-footer></app-footer>
+    </div>
+    <br>
+    <br>
+    <br>
+<app-footer></app-footer>
     
 </div>
 </div>

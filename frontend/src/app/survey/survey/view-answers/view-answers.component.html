@@ -6,7 +6,7 @@
         <div class="container_header">    
             <h1>Survey Responses </h1>
     </div>
-
+    <!-- Table Content -->
         <div class="table">
             <br>
             <table id="exceltable">
@@ -15,19 +15,17 @@
                     <th>Respondent: {{item.surveyAnswers.length}}</th>
                     <th>Responses</th>
                 </tr>
-               
                 <!-- Repeatable Template Row -->
                 <tr *ngFor="let completed of item.surveyAnswers">
                     <td> {{completed.respondent}}</td>
                     <td>
                     <ul>
                       <li *ngFor="let ques of completed.answers">{{ques.question}}&nbsp;&nbsp;{{ques.answer}} </li>
-                   
                    </ul>
                    </td>
             </tr>     
-
             </table>
+            <!-- Button to export responses to excel -->
            <button (click)="exportexcel()">Export to Excel</button>
            <button routerLink="/survey/list" ><i class="fas fa-arrow-circle-left"></i> Back to the Survey list </button>
             <app-footer> </app-footer>
@@ -40,8 +38,5 @@
   background-color: rgba(204, 204, 255,0.6);
   color: black;
 }
-   
-      </style>
-
-
+</style>
 <!-- <%- include ../partials/footer.ejs %> -->

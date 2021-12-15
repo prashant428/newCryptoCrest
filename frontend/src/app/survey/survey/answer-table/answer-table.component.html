@@ -3,10 +3,9 @@
 <!-- Main Content -->
 <div class="main_div" style="background-image:url('../../assets/work.png');height: 850px;">
     <main class="container_div" style="padding-top: 40px;height: 850px;">
-        <div class="container_header">  
-           
+        <div class="container_header">    
     </div>
-        
+        <!-- Table for answers -->
         <div class="table">
             <br>
             <table>
@@ -15,16 +14,13 @@
                     <th>question</th>
                     <th>answer</th>
                 </tr>
-
                 <!-- Repeatable Template Row -->
                 <tr *ngFor="let answer of item.surveyAnswers; let i=index">
                     <!--<form #form="ngForm">-->
                     <td>{{answer.respondent }}
                     </td>
-            
-
+                </tr>
             </table>
-           
             <app-footer> </app-footer>
         </div>
     </main>
@@ -35,5 +31,4 @@
   background-color: rgba(204, 204, 255,0.6);
   color: black;
 }
-   
-      </style>
+</style>

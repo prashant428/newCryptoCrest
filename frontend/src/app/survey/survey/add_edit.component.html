@@ -9,26 +9,21 @@
         </div>
         <div class="container_header">
             <h1>{{editing ? "Edit" : "Add a new"}} Item</h1>
-
             <form novalidate #form="ngForm" (ngSubmit)="save(form)">
-                <!-- <form class="form" method="POST"> -->
-                    <div class="form-group">
-                        <input type="hidden"
-                            name="id"
-                            [(ngModel)]="item._id"
-                        >
-                        
-                        <input type="text" 
-                            id="itemTextField"
-                            placeholder="Enter the Item Name"
-                            name="item" 
-                            [(ngModel)]="item.item"
-                            required>
-                    </div>
-                
-               
+                <!-- form content -->
                 <div class="form-group">
-               
+                    <input type="hidden"
+                        name="id"
+                        [(ngModel)]="item._id"
+                    >
+                        <input type="text" 
+                        id="itemTextField"
+                        placeholder="Enter the Item Name"
+                        name="item" 
+                        [(ngModel)]="item.item"
+                        required>
+                </div>
+                <div class="form-group">
                     <input type="date" 
                     id="startDateField"
                     name="startDate" 
@@ -45,7 +40,6 @@
                      [(ngModel)]="item.endDate"
                      >
                  </div>
-                
                 <div class="form-group">
                    
                     <input type="text" 
@@ -55,18 +49,17 @@
                     [(ngModel)]="item.status"
                     >
                 </div>
-               
                 <br/>
-
+                <!-- Submit Info Button -->
                 <button type="submit">
                     <i class="fas fa-edit"></i> 
                     Submit
                 </button>
+                <!-- Cancel and returns the user back to the list -->
                 <button routerLink="/survey/list" >
                     <i class="fas fa-undo"></i> 
                     Cancel
                 </button>
-
             </form>
         </div>
     </div>

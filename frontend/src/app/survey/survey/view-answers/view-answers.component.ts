@@ -30,7 +30,7 @@ export class ViewAnswersComponent implements OnInit {
   get surveyList(): Survey[] {
     return this.repository.getSurvey();        
   }
-
+//exports answers to excel
   exportexcel() :void{
     let table=document.getElementById("exceltable");
     const ws:XLSX.WorkSheet=XLSX.utils.table_to_sheet(table);

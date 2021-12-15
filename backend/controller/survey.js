@@ -79,7 +79,7 @@ module.exports.processEdit = (req, res, next) => {
 
 }
 
-
+//logic to perform delete of survey item
 module.exports.performDelete = (req, res, next) => {
 
     let id = req.params.id;
@@ -133,7 +133,7 @@ module.exports.processAdd = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the list
             console.log(item);
             res.status(200).json(item); 
         }

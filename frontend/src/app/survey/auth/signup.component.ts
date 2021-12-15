@@ -16,7 +16,7 @@ export class SignUpComponent {
         private auth: AuthService) { }
     signup(form: NgForm) {
         if (form.valid) {
-            // Checks if the passwords match.
+            // validates password data
             if(this.user.password == this.confirmPassowrd){
 
                 if (/[A-Z]/.test(this.user.password) === false) {

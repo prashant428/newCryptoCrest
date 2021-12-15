@@ -24,7 +24,7 @@ export class EditprofileComponent  {
         
           
     }
-
+//saves updated user profile
     save(form: NgForm) {
         
         this.repository.saveUser(this.item);

@@ -2,7 +2,6 @@
 
 <div class="container">
     <div class="row">
-
         <div class="offset-md-3 col-md-3">
             <h1><%= title %></h1>
             <% for(var i in messages) { %>
@@ -19,10 +18,12 @@
                     <input type="password" name="password" class="form-control"/>
                 </div>
                 <br>
+                <!-- Button to Sign in -->
                 <div class="form-group">
                     <input class="btn btn-primary" type="submit" value="Sign In" />                    
                 </div>
                 <br>
+                <!-- Route to sign up page if user doesnt have an account -->
                 <div class="form-group">
                     <a href="/users/signup" style="text-decoration: none">                
                         <i class="fas fa-user-plus"></i> 
@@ -30,9 +31,6 @@
                     </a>
                 </div>
             </form>
-        </div>
-        <div>
-                        
         </div>
     </div>
 </div>

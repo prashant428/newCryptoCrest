@@ -22,11 +22,11 @@ export class ListComponent {
         this.username=auth.username;
        
     }
-
+//gets list of survey
     get surveyList(): Survey[] {
         return this.repository.getSurvey();        
     }
-
+//deletes survey
     deleteMethod(id: string) {
         if(confirm("Are you sure do you want to delete?")) {
             this.router.navigateByUrl("survey/delete/"+id);

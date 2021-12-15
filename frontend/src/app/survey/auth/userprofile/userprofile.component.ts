@@ -18,7 +18,7 @@ export class UserprofileComponent  {
         
 
     }
-   
+   //gets user list
     get userList(): User [] {
         return this.repository.getUser();
         

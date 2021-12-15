@@ -11,7 +11,7 @@ export class AuthGuard {
 
     constructor(private router: Router,
         private auth: AuthService) { }
-
+//activating the auth guard
     canActivate(route: ActivatedRouteSnapshot,
                 state: RouterStateSnapshot): boolean 
     {

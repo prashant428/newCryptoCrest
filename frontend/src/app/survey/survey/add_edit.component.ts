@@ -33,7 +33,7 @@ export class AddEditComponent {
         } 
           
     }
-
+//saves user entered data
     save(form: NgForm) {
         if(this.item.endDate<this.item.startDate) {
             this.message= "The End Date must be greater than Start Date!"
@@ -48,7 +48,7 @@ export class AddEditComponent {
         }
        
     }
-
+//deletes item
     private deleteItem(id: string){
         this.repository.deleteSurvey(id);
         this.router.navigateByUrl("survey/list");

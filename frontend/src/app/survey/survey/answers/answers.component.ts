@@ -43,7 +43,7 @@ export class AnswersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+//saves user answers
   save() {
   
     for (let i=0; i<this.item.surveyQuestions.length; i++){

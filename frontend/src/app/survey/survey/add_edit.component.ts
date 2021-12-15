@@ -14,11 +14,13 @@ export class AddEditComponent {
 
     editing: boolean = false;
     item: Survey = new Survey();
+    public message: string;
 
     constructor(private repository: SurveyRepository,
                 private router: Router,
                 activeRoute: ActivatedRoute,
                 private auth: AuthService) 
+                
     { 
         if (activeRoute.snapshot.params["mode"] == "delete") {
             this.deleteItem(activeRoute.snapshot.params["id"]);
@@ -33,9 +35,18 @@ export class AddEditComponent {
     }
 
     save(form: NgForm) {
-        this.item.creator=this.auth.username;
-        this.repository.saveSurvey(this.item);
-        this.router.navigateByUrl("survey/list");
+        if(this.item.endDate<this.item.startDate) {
+            this.message= "The End Date must be greater than Start Date!"
+
+
+        }
+        else{
+            this.item.creator=this.auth.username;
+            this.repository.saveSurvey(this.item);
+            this.router.navigateByUrl("survey/list");
+
+        }
+       
     }
 
     private deleteItem(id: string){

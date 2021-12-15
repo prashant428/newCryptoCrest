@@ -4,6 +4,9 @@
 <!-- Content for the Add_Edit page -->
 <div class="container_div" style="padding-top: 30px; width: 55%; height: 850px; ">
     <div class="row">
+        <div class="bg-danger mt-2 p-2 text-center text-white" *ngIf="message != null">
+            {{message}}
+        </div>
         <div class="container_header">
             <h1>{{editing ? "Edit" : "Add a new"}} Item</h1>
 
